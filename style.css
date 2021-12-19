@@ -1,0 +1,16 @@
+table {
+  border-collapse: collapse;
+  font-family: Arial, Helvetica, sans-serif;
+}
+td, th {
+  border: 1px solid black;
+  text-align: right;
+  padding: 1px 10px 1px 10px;
+}
+th{
+  background: grey;
+  color: white;
+}
+.paragraf{
+  text-align: center;
+}
