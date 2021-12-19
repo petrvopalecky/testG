@@ -27,13 +27,13 @@ while (($line = fgetcsv($file)) !== FALSE) {
     if ($result->num_rows > 0) {
       while($r = $result->fetch_assoc()) {
         $rozpocetSum = $r["rozpocet"] + $rozpocet;
-        $cerpaniSum  = $r["cerpani"] + $cerpani;
+        $cerpaniSum  = $r["cerpani"]  + $cerpani;
 
         $update = "UPDATE rozpocet SET rozpocet='".$rozpocetSum."', cerpani='".$cerpaniSum."' WHERE  paragraf = '".$paragraf."'";
         mysqli_query($conn, $update);
 
         $rozpocetSum = 0;
-        $cerpaniSum = 0;
+        $cerpaniSum  = 0;
       }
     }
     else {
